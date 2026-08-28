@@ -30,16 +30,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (menuButton && navMenu) {
     menuButton.addEventListener("click", function () {
-      navMenu.classList.toggle("active");
+      const isOpen = navMenu.classList.toggle("active");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navMenu.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navMenu.classList.remove("active");
+        menuButton.setAttribute("aria-expanded", "false");
+      });
     });
   }
 
   // Smooth scrolling
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener("click", function (event) {
-      const target = document.querySelector(
-        link.getAttribute("href")
-      );
+      const href = link.getAttribute("href");
+
+      if (!href || href === "#") {
+        return;
+      }
+
+      const target = document.querySelector(href);
 
       if (target) {
         event.preventDefault();
