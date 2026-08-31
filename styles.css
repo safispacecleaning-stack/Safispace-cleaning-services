@@ -89,6 +89,7 @@ h3 { font-size: 1.8rem; }
 .contact-action .button-primary { background: var(--white); color: var(--ink); }
 .contact-action .button-primary:hover { background: var(--paper); }
 
+/* FINAL PROFESSIONAL POLISH - SECTION 1 */
 /* Accessibility: Focus states */
 a:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
 
@@ -101,46 +102,84 @@ a:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
   }
 }
 
-/* Mobile responsiveness */
+/* FINAL PROFESSIONAL POLISH - SECTION 2 */
+/* Mobile responsiveness with enhanced touch optimization */
 @media (max-width: 760px) {
-  .site-header { padding: 18px 6vw; position: relative; }
+  .site-header { 
+    padding: 18px 6vw; 
+    position: relative; 
+  }
   .menu-toggle { display: block; }
-  nav { background: var(--white); border-bottom: 1px solid var(--line); display: none; flex-direction: column; gap: 20px; left: 0; padding: 24px 6vw; position: absolute; right: 0; top: 70px; z-index: 5; }
+  nav { 
+    background: var(--white); 
+    border-bottom: 1px solid var(--line); 
+    display: none; 
+    flex-direction: column; 
+    gap: 20px; 
+    left: 0; 
+    padding: 24px 6vw; 
+    position: absolute; 
+    right: 0; 
+    top: 70px; 
+    z-index: 5; 
+  }
   nav.active { display: flex; }
-  .hero { display: flex; flex-direction: column; gap: 42px; margin-top: 35px; padding: 0 6vw; }
-  .hero-art { height: 390px; width: 100%; }
+  .hero { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 42px; 
+    margin-top: 35px; 
+    padding: 0 6vw; 
+  }
+  .hero-art { 
+    height: 390px; 
+    width: 100%; 
+  }
   .window { height: 180px; }
   .sofa { bottom: 20%; }
   .band { padding: 70px 6vw; }
   .intro, .contact { display: block; }
   .intro > div, .contact-action { margin-top: 36px; }
   .stat-row { justify-content: space-between; }
-  .section-heading { align-items: start; display: block; }
+  .section-heading { 
+    align-items: start; 
+    display: block; 
+  }
   .section-heading > p { margin-top: 25px; }
   .service-grid { display: block; }
-  .service-card { margin-bottom: 14px; min-height: 280px; }
+  .service-card { 
+    margin-bottom: 14px; 
+    min-height: 280px; 
+  }
   .service-card h3 { margin-top: 65px; }
-  .site-footer { flex-direction: column; gap: 8px; padding: 20px 6vw; }
+  .site-footer { 
+    flex-direction: column; 
+    gap: 8px; 
+    padding: 20px 6vw; 
+  }
   
   h1 { font-size: clamp(3rem, 15vw, 4.5rem); }
   
   .contact { border-radius: 0; }
   
-  .button { width: 100%; justify-content: center; }
+  .button { 
+    width: 100%; 
+    justify-content: center; 
+  }
   
   .hero-actions { width: 100%; }
+}
 
-  /* Disable hover effects on touch devices */
-  @media (hover: none) and (pointer: coarse) {
-    .button:hover,
-    .button-primary:hover,
-    .button-light:hover,
-    .nav-cta:hover,
-    .service-card:hover {
-      transform: none;
-      box-shadow: inherit;
-      color: inherit;
-      background: inherit;
-    }
+/* Disable hover effects on touch devices for better UX */
+@media (hover: none) and (pointer: coarse) {
+  .button:hover,
+  .button-primary:hover,
+  .button-light:hover,
+  .nav-cta:hover,
+  .service-card:hover {
+    transform: none;
+    box-shadow: inherit;
+    color: inherit;
+    background: inherit;
   }
 }
